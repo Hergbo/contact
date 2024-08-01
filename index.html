@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" placeholder="first name" required>
-            <input type="text" id="lastname" placeholder="last name" required>
-            <input type="email" id="email" placeholder="email" required>
-            <input type="number" id="phone" placeholder="phone no." required>
-            <textarea name="" id="message"  rows="4" placeholder="how can we help you?"></textarea>
-            <button type="submit">send</button>
-        </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>contact</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- <form onsubmit="sendEmail(); reset(); return false;"> -->
+            <form
+                id="contact-form"
+                method="POST"
+                action="https://formsubmit.co/garrimerchant@gmail.com"
+            >
+                <input type="hidden" name="_next" value="http://localhost:5173/thank-you.html" />
+                <input type="hidden" name="_captcha" value="false" />
+                <!-- <form action="https://formsubmit.co/garrimerchant@gmail.com" method="POST"> -->
+                <h3>GET IN TOUCH</h3>
+                <input type="text" name="first-name" id="name" placeholder="first name" required />
+                <input
+                    type="text"
+                    name="last-name"
+                    id="lastname"
+                    placeholder="last name"
+                    required
+                />
+                <input type="email" name="email" id="email" placeholder="email" required />
+                <input
+                    type="number"
+                    name="phone-number"
+                    id="phone"
+                    placeholder="phone no."
+                    required
+                />
+                <textarea
+                    name=""
+                    name="message"
+                    id="message"
+                    rows="4"
+                    placeholder="how can we help you?"
+                ></textarea>
+                <button type="submit">send</button>
+            </form>
+        </div>
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+>>>>>>> master
     <script>
         function sendEmail(){
             Email.send({
@@ -37,6 +64,13 @@
             message => alert("Message sent succesfully!")
             );
         }
+<<<<<<< HEAD
     </script>
 </body>
+</html>
+=======
+    </script> -->
+
+        <script type="module" src="./app.js"></script>
+    </body>
 </html>
